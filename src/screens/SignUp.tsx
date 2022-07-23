@@ -5,7 +5,7 @@ import { Text, View } from "../components/Themed";
 import { RootStackScreenProps } from "../../types";
 import { AppContext, IAppContext } from "../hooks/useContext";
 
-export default function LoginScreen({ navigation }: RootStackScreenProps<"Login">) {
+export default function SignUpScreen({ navigation }: RootStackScreenProps<"NotFound">) {
   const { handlers } = useContext(AppContext) as IAppContext;
   return (
     <View style={styles.container}>
@@ -13,8 +13,7 @@ export default function LoginScreen({ navigation }: RootStackScreenProps<"Login"
       {/* <TouchableOpacity onPress={() => navigation.replace("Root")} style={styles.link}>
         <Text style={styles.linkText}>Login here</Text>
       </TouchableOpacity> */}
-      <Button title={"Login"} onPress={handlers.onLogin} />
-      <Button title={"Go to SignUp Page"} onPress={() => navigation.navigate("SignUp")} />
+      <Button title={"SignUp"} onPress={handlers.onLogin} />
     </View>
   );
 }
